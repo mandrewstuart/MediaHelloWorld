@@ -16,7 +16,7 @@ cur.execute('CREATE TABLE IF NOT EXISTS data (title text, story text, uuid text,
 
 print('connected to DB, pulling data')
 
-data_from_site = requests.get("https://webhose.io/search?token=YOUR_API_KEY_HERE&format=json&q=SEARCH_TERM_HERE%20language%3A(english)%20(site_type%3Anews)&latest=true")
+data_from_site = requests.get("https://webhose.io/search?token=" + YOUR_API_KEY_HERE + "&format=json&q=SEARCH_TERM_HERE%20language%3A(english)%20(site_type%3Anews)&latest=true")
 posts = data_from_site.json()['posts']
 
 
